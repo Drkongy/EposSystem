@@ -65,8 +65,6 @@ namespace EposSystem
                 cmd.Parameters.AddWithValue("@Email", TBEmail.Text);
                 cmd.Parameters.AddWithValue("@Admin", 1);
                 cmd.Parameters.AddWithValue("@Creation", DateTime.Now);
-
-
                 cmd.ExecuteNonQuery();
                 conn.Close();
 
@@ -74,7 +72,7 @@ namespace EposSystem
 
 
 
-                MessageBox.Show("Data Uploaded Successfully");
+                MessageBox.Show("Data Uploaded To DataBase...");
                 MessageBox.Show("System Restarting... Press Enter To Continute");
 
                 Application.Restart();
