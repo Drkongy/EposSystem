@@ -30,6 +30,7 @@ namespace EposSystem
         /// </summary>
         private void InitializeComponent()
         {
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(FirstTime));
             this.label1 = new System.Windows.Forms.Label();
             this.TBName = new System.Windows.Forms.TextBox();
             this.label2 = new System.Windows.Forms.Label();
@@ -63,9 +64,9 @@ namespace EposSystem
             // TBName
             // 
             this.TBName.Font = new System.Drawing.Font("Segoe UI", 11.25F, System.Drawing.FontStyle.Bold);
-            this.TBName.Location = new System.Drawing.Point(95, 111);
+            this.TBName.Location = new System.Drawing.Point(107, 111);
             this.TBName.Name = "TBName";
-            this.TBName.Size = new System.Drawing.Size(506, 27);
+            this.TBName.Size = new System.Drawing.Size(500, 27);
             this.TBName.TabIndex = 1;
             // 
             // label2
@@ -73,7 +74,7 @@ namespace EposSystem
             this.label2.AutoSize = true;
             this.label2.Font = new System.Drawing.Font("Segoe UI", 15.75F, System.Drawing.FontStyle.Bold);
             this.label2.ForeColor = System.Drawing.SystemColors.ControlLightLight;
-            this.label2.Location = new System.Drawing.Point(304, 78);
+            this.label2.Location = new System.Drawing.Point(316, 78);
             this.label2.Name = "label2";
             this.label2.Size = new System.Drawing.Size(71, 30);
             this.label2.TabIndex = 2;
@@ -94,7 +95,7 @@ namespace EposSystem
             this.label3.AutoSize = true;
             this.label3.Font = new System.Drawing.Font("Segoe UI", 15.75F, System.Drawing.FontStyle.Bold);
             this.label3.ForeColor = System.Drawing.SystemColors.ControlLightLight;
-            this.label3.Location = new System.Drawing.Point(271, 141);
+            this.label3.Location = new System.Drawing.Point(283, 141);
             this.label3.Name = "label3";
             this.label3.Size = new System.Drawing.Size(141, 30);
             this.label3.TabIndex = 7;
@@ -103,9 +104,9 @@ namespace EposSystem
             // TBOrg
             // 
             this.TBOrg.Font = new System.Drawing.Font("Segoe UI", 11.25F, System.Drawing.FontStyle.Bold);
-            this.TBOrg.Location = new System.Drawing.Point(95, 174);
+            this.TBOrg.Location = new System.Drawing.Point(107, 174);
             this.TBOrg.Name = "TBOrg";
-            this.TBOrg.Size = new System.Drawing.Size(506, 27);
+            this.TBOrg.Size = new System.Drawing.Size(500, 27);
             this.TBOrg.TabIndex = 6;
             // 
             // label4
@@ -113,7 +114,7 @@ namespace EposSystem
             this.label4.AutoSize = true;
             this.label4.Font = new System.Drawing.Font("Segoe UI", 15.75F, System.Drawing.FontStyle.Bold);
             this.label4.ForeColor = System.Drawing.SystemColors.ControlLightLight;
-            this.label4.Location = new System.Drawing.Point(301, 204);
+            this.label4.Location = new System.Drawing.Point(313, 204);
             this.label4.Name = "label4";
             this.label4.Size = new System.Drawing.Size(81, 30);
             this.label4.TabIndex = 9;
@@ -122,9 +123,9 @@ namespace EposSystem
             // TBBranch
             // 
             this.TBBranch.Font = new System.Drawing.Font("Segoe UI", 11.25F, System.Drawing.FontStyle.Bold);
-            this.TBBranch.Location = new System.Drawing.Point(94, 237);
+            this.TBBranch.Location = new System.Drawing.Point(106, 237);
             this.TBBranch.Name = "TBBranch";
-            this.TBBranch.Size = new System.Drawing.Size(506, 27);
+            this.TBBranch.Size = new System.Drawing.Size(500, 27);
             this.TBBranch.TabIndex = 8;
             // 
             // label5
@@ -132,7 +133,7 @@ namespace EposSystem
             this.label5.AutoSize = true;
             this.label5.Font = new System.Drawing.Font("Segoe UI", 15.75F, System.Drawing.FontStyle.Bold);
             this.label5.ForeColor = System.Drawing.SystemColors.ControlLightLight;
-            this.label5.Location = new System.Drawing.Point(304, 267);
+            this.label5.Location = new System.Drawing.Point(316, 267);
             this.label5.Name = "label5";
             this.label5.Size = new System.Drawing.Size(66, 30);
             this.label5.TabIndex = 11;
@@ -141,9 +142,9 @@ namespace EposSystem
             // TBEmail
             // 
             this.TBEmail.Font = new System.Drawing.Font("Segoe UI", 11.25F, System.Drawing.FontStyle.Bold);
-            this.TBEmail.Location = new System.Drawing.Point(95, 300);
+            this.TBEmail.Location = new System.Drawing.Point(106, 300);
             this.TBEmail.Name = "TBEmail";
-            this.TBEmail.Size = new System.Drawing.Size(505, 27);
+            this.TBEmail.Size = new System.Drawing.Size(500, 27);
             this.TBEmail.TabIndex = 10;
             // 
             // BtnSubmit
@@ -152,29 +153,31 @@ namespace EposSystem
             this.BtnSubmit.FlatStyle = System.Windows.Forms.FlatStyle.System;
             this.BtnSubmit.Font = new System.Drawing.Font("Segoe UI", 14.25F, System.Drawing.FontStyle.Bold);
             this.BtnSubmit.ForeColor = System.Drawing.SystemColors.ControlLightLight;
-            this.BtnSubmit.Location = new System.Drawing.Point(94, 396);
+            this.BtnSubmit.Location = new System.Drawing.Point(106, 396);
             this.BtnSubmit.Name = "BtnSubmit";
-            this.BtnSubmit.Size = new System.Drawing.Size(507, 36);
+            this.BtnSubmit.Size = new System.Drawing.Size(500, 42);
             this.BtnSubmit.TabIndex = 12;
             this.BtnSubmit.Text = "Submit";
             this.BtnSubmit.UseVisualStyleBackColor = false;
+            this.BtnSubmit.Click += new System.EventHandler(this.BtnSubmit_Click);
             // 
             // LblError
             // 
             this.LblError.AutoSize = true;
             this.LblError.Font = new System.Drawing.Font("Segoe UI", 14.25F, System.Drawing.FontStyle.Bold);
             this.LblError.ForeColor = System.Drawing.Color.IndianRed;
-            this.LblError.Location = new System.Drawing.Point(95, 315);
+            this.LblError.Location = new System.Drawing.Point(119, 441);
             this.LblError.Name = "LblError";
-            this.LblError.Size = new System.Drawing.Size(0, 25);
+            this.LblError.Size = new System.Drawing.Size(324, 25);
             this.LblError.TabIndex = 13;
+            this.LblError.Text = "Please make sure all data is correct!";
             // 
             // LblCode
             // 
             this.LblCode.AutoSize = true;
             this.LblCode.Font = new System.Drawing.Font("Segoe UI", 15.75F, System.Drawing.FontStyle.Bold);
             this.LblCode.ForeColor = System.Drawing.SystemColors.ControlLightLight;
-            this.LblCode.Location = new System.Drawing.Point(144, 330);
+            this.LblCode.Location = new System.Drawing.Point(156, 330);
             this.LblCode.Name = "LblCode";
             this.LblCode.Size = new System.Drawing.Size(135, 30);
             this.LblCode.TabIndex = 15;
@@ -183,29 +186,33 @@ namespace EposSystem
             // TBCode
             // 
             this.TBCode.Font = new System.Drawing.Font("Segoe UI", 11.25F, System.Drawing.FontStyle.Bold);
-            this.TBCode.Location = new System.Drawing.Point(95, 363);
+            this.TBCode.Location = new System.Drawing.Point(107, 363);
+            this.TBCode.MaxLength = 4;
             this.TBCode.Name = "TBCode";
-            this.TBCode.Size = new System.Drawing.Size(243, 27);
+            this.TBCode.Size = new System.Drawing.Size(233, 27);
             this.TBCode.TabIndex = 14;
+            this.TBCode.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.TBCode_KeyPress);
             // 
             // label7
             // 
             this.label7.AutoSize = true;
             this.label7.Font = new System.Drawing.Font("Segoe UI", 15.75F, System.Drawing.FontStyle.Bold);
             this.label7.ForeColor = System.Drawing.SystemColors.ControlLightLight;
-            this.label7.Location = new System.Drawing.Point(412, 330);
+            this.label7.Location = new System.Drawing.Point(437, 330);
             this.label7.Name = "label7";
-            this.label7.Size = new System.Drawing.Size(105, 30);
+            this.label7.Size = new System.Drawing.Size(101, 30);
             this.label7.TabIndex = 17;
-            this.label7.Text = "Password";
+            this.label7.Text = "Pin Code";
             // 
             // TBPassword
             // 
             this.TBPassword.Font = new System.Drawing.Font("Segoe UI", 11.25F, System.Drawing.FontStyle.Bold);
-            this.TBPassword.Location = new System.Drawing.Point(343, 363);
+            this.TBPassword.Location = new System.Drawing.Point(346, 363);
+            this.TBPassword.MaxLength = 10;
             this.TBPassword.Name = "TBPassword";
-            this.TBPassword.Size = new System.Drawing.Size(257, 27);
+            this.TBPassword.Size = new System.Drawing.Size(260, 27);
             this.TBPassword.TabIndex = 16;
+            this.TBPassword.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.TBPassword_KeyPress);
             // 
             // FirstTime
             // 
@@ -230,6 +237,7 @@ namespace EposSystem
             this.Controls.Add(this.TBName);
             this.Controls.Add(this.label1);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
+            this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.Name = "FirstTime";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "FirstTime";

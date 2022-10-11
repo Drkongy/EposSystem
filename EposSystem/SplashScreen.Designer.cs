@@ -30,6 +30,7 @@ namespace EposSystem
         /// </summary>
         private void InitializeComponent()
         {
+            this.components = new System.ComponentModel.Container();
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(SplashScreen));
             this.PnlMain = new System.Windows.Forms.Panel();
             this.lblLisence = new System.Windows.Forms.Label();
@@ -38,6 +39,7 @@ namespace EposSystem
             this.PBIcon = new System.Windows.Forms.PictureBox();
             this.LblLoadingMsgs = new System.Windows.Forms.Label();
             this.lblVersion = new System.Windows.Forms.Label();
+            this.Timer = new System.Windows.Forms.Timer(this.components);
             this.PnlMain.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.PBIcon)).BeginInit();
             this.SuspendLayout();
@@ -58,7 +60,7 @@ namespace EposSystem
             // lblLisence
             // 
             this.lblLisence.AutoSize = true;
-            this.lblLisence.Location = new System.Drawing.Point(17, 325);
+            this.lblLisence.Location = new System.Drawing.Point(14, 322);
             this.lblLisence.Name = "lblLisence";
             this.lblLisence.Size = new System.Drawing.Size(126, 13);
             this.lblLisence.TabIndex = 3;
@@ -100,7 +102,7 @@ namespace EposSystem
             // LblLoadingMsgs
             // 
             this.LblLoadingMsgs.AutoSize = true;
-            this.LblLoadingMsgs.Location = new System.Drawing.Point(34, 380);
+            this.LblLoadingMsgs.Location = new System.Drawing.Point(31, 380);
             this.LblLoadingMsgs.Name = "LblLoadingMsgs";
             this.LblLoadingMsgs.Size = new System.Drawing.Size(75, 13);
             this.LblLoadingMsgs.TabIndex = 1;
@@ -109,11 +111,17 @@ namespace EposSystem
             // lblVersion
             // 
             this.lblVersion.AutoSize = true;
-            this.lblVersion.Location = new System.Drawing.Point(531, 380);
+            this.lblVersion.Location = new System.Drawing.Point(516, 380);
             this.lblVersion.Name = "lblVersion";
             this.lblVersion.Size = new System.Drawing.Size(72, 13);
             this.lblVersion.TabIndex = 2;
             this.lblVersion.Text = "Version: 1.0.0";
+            // 
+            // Timer
+            // 
+            this.Timer.Enabled = true;
+            this.Timer.Interval = 500;
+            this.Timer.Tick += new System.EventHandler(this.Timer_Tick);
             // 
             // SplashScreen
             // 
@@ -129,6 +137,7 @@ namespace EposSystem
             this.Name = "SplashScreen";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "StartUp";
+            this.Load += new System.EventHandler(this.SplashScreen_Load);
             this.PnlMain.ResumeLayout(false);
             this.PnlMain.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.PBIcon)).EndInit();
@@ -146,5 +155,6 @@ namespace EposSystem
         private Label lblLisence;
         private Label LblLoadingMsgs;
         private Label lblVersion;
+        private Timer Timer;
     }
 }
